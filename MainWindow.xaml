@@ -1,0 +1,22 @@
+﻿<Window x:Class="TicTacToe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Piškvorky" Height="450" Width="450" Background="DimGray">
+    <Grid x:Name="RootGrid">
+        <StackPanel x:Name="MenuPanel" VerticalAlignment="Top" Margin="10">
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <TextBlock Text="Rows: " VerticalAlignment="Center" />
+                <TextBox x:Name="RowsTextBox" Width="50" Text="3"  Margin="5,0" Background="LightGray" />
+                <TextBlock Text="Columns: " VerticalAlignment="Center" Margin="10,0,0,0" />
+                <TextBox x:Name="ColumnsTextBox" Width="50" Text="3" Margin="5,0" Background="LightGray" />
+                <TextBlock Text="Win Condition: " VerticalAlignment="Center" Margin="10,0,0,0" />
+                <TextBox x:Name="WinConditionTextBox" Width="50" Text="3" Margin="5,0" Background="LightGray" />
+            </StackPanel>
+            <Button Content="Start Game" Click="StartGame_Click" Margin="0,10" HorizontalAlignment="Center" Width="100" Background="LightGray" />
+        </StackPanel>
+        <Grid x:Name="MainGrid" Margin="10">
+            <TextBox HorizontalAlignment="Center" Height="99" Margin="0,83,0,0" TextWrapping="Wrap" Text="Piškovrky jsou hra kde se hráči  postupně střídají ve vepisování symbolů do políček. Cílem je vytvořit řadu určitého množství svých symbolů vodorovně, svisle nebo šikmo. Tato řada musí tvořit přímku a nesmí být nikde přerušena soupeřovým symbolem. Kdo takovou řadu vytvoří jako první, vyhrál." VerticalAlignment="Top" Width="410" TextChanged="TextBox_TextChanged" Background="LightGoldenrodYellow"/>
+            <!-- Dynamic grid buttons will be added here -->
+        </Grid>
+    </Grid>
+</Window>
